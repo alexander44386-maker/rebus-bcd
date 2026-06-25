@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: rebus-rumble
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PUBLIC_URL
+        sync: false   # Set this to your Render URL after first deploy
